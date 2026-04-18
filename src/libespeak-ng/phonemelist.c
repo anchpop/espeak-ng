@@ -219,6 +219,76 @@ void MakePhonemeList(Translator *tr, int post_pause, bool start_sentence)
 	SelectPhonemeTable(tr->phoneme_tab_ix);
 	n_ph_list3 = SubstitutePhonemes(ph_list3) - 2;
 
+	if (tr->langopts.stress_flags & S_LIAISON_RESYLLAB) {
+		// Liaison resyllabification (French): a word-final liaison consonant that
+		// surfaces before a vowel-initial word syllabifies with the following vowel,
+		// so the word-boundary marker belongs on the consonant, not on the vowel.
+		// Match the French liaison phonemes by mnemonic (z2/t2/n2/p2/r2/t3/z3).
+		// These names collide with unrelated phonemes in other languages (e.g. t2
+		// in ph_english / ph_hungarian), hence the language-level gating.
+		for (int k = 0; k < n_ph_list3 - 1; k++) {
+			if (ph_list3[k + 1].sourceix == 0)
+				continue;
+			PHONEME_TAB *ph_here = phoneme_tab[ph_list3[k].phcode];
+			if (ph_here == NULL)
+				continue;
+			unsigned int mnem = ph_here->mnemonic;
+			bool is_liaison;
+			switch (mnem) {
+			case 'z' | ('2' << 8):
+			case 't' | ('2' << 8):
+			case 'n' | ('2' << 8):
+			case 'p' | ('2' << 8):
+			case 'r' | ('2' << 8):
+			case 't' | ('3' << 8):
+			case 'z' | ('3' << 8):
+				is_liaison = true;
+				break;
+			default:
+				is_liaison = false;
+			}
+			if (!is_liaison)
+				continue;
+			PHONEME_TAB *ph_next = phoneme_tab[ph_list3[k + 1].phcode];
+			if (ph_next == NULL)
+				continue;
+			// Only move the boundary when liaison will actually surface; the
+			// French phoneme programs surface these consonants before vowels and
+			// before the glides w / j / w/, and delete them otherwise. Matching
+			// that narrow set avoids placing sourceix on a phoneme that will be
+			// deleted (e.g. "des lois" where the next phoneme is [l]).
+			unsigned int next_mnem = ph_next->mnemonic;
+			bool next_triggers_liaison =
+			    (ph_next->type == phVOWEL) ||
+			    (next_mnem == (unsigned int)'w') ||
+			    (next_mnem == (unsigned int)'j') ||
+			    (next_mnem == ('w' | ('/' << 8)));
+			if (!next_triggers_liaison)
+				continue;
+			ph_list3[k].sourceix = ph_list3[k + 1].sourceix;
+			ph_list3[k + 1].sourceix = 0;
+		}
+	}
+
+	if (tr->langopts.stress_flags & S_FINAL_WORD_STRESS) {
+		// Phrase-final stress (French): demote primary/secondary stress on every word
+		// except the last word of the clause. Runs before the wordstress pass so that
+		// downstream word-stress comparisons see the reduced levels.
+		int last_word_start = -1;
+		for (int k = n_ph_list3 - 1; k >= 0; k--) {
+			if (ph_list3[k].sourceix) {
+				last_word_start = k;
+				break;
+			}
+		}
+		if (last_word_start > 0) {
+			for (int k = 0; k < last_word_start; k++) {
+				if (ph_list3[k].stresslevel >= STRESS_IS_SECONDARY)
+					ph_list3[k].stresslevel = STRESS_IS_UNSTRESSED;
+			}
+		}
+	}
+
 	for (j = 0; (j < n_ph_list3) && (ix < N_PHONEME_LIST-3);) {
 		if (ph_list3[j].sourceix) {
 			// start of a word

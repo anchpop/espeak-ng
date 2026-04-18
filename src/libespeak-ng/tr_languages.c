@@ -865,7 +865,7 @@ Translator *SelectTranslator(const char *name)
 	{
 		SetupTranslator(tr, stress_lengths_fr, stress_amps_fr);
 		tr->langopts.stress_rule = STRESSPOSN_1R; // stress on final syllable
-		tr->langopts.stress_flags = S_NO_AUTO_2 | S_FINAL_DIM; // don't use secondary stress
+		tr->langopts.stress_flags = S_NO_AUTO_2 | S_FINAL_DIM | S_FINAL_WORD_STRESS | S_LIAISON_RESYLLAB; // don't use secondary stress; final-word-only stress; liaison onsets the following word
 		tr->langopts.param[LOPT_IT_LENGTHEN] = 1; // remove lengthen indicator from unstressed syllables
 		tr->langopts.length_mods0 = tr->langopts.length_mods; // don't lengthen vowels in the last syllable
 		tr->langopts.accents = 2; // Say "Capital" after the letter.

@@ -400,6 +400,14 @@ typedef struct {
 #define S_FINAL_SPANISH     0x200
 // bit9=stress last syllable if it doesn't end in vowel or "s" or "n"  LANG=Spanish
 
+#define S_FINAL_WORD_STRESS 0x400
+// bit10= only the final word of a clause carries its word-level stress; earlier words
+// have primary/secondary stress demoted to not-stressed (French phrase-final prosody)
+
+#define S_LIAISON_RESYLLAB  0x800
+// bit11= a word-final liaison consonant that surfaces before a vowel-initial word
+// belongs to the next word's onset; move its word-boundary marker forward (French)
+
 #define S_2_SYL_2           0x1000
 // bit12= In a 2-syllable word, if one has primary stress then give the other secondary stress
 
