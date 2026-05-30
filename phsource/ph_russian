@@ -37,7 +37,7 @@ endphoneme
 
 phoneme l
  liquid rfx
- ipa ɭ
+ ipa ɫ
  lengthmod 7
  length 40
  FMT(l^/l_rfx)
@@ -46,7 +46,7 @@ endphoneme
 
 phoneme l^
  liquid rfx pzd
- ipa ɭ
+ ipa lʲ
 length 80
  FMT(l^/l_rfx)
 endphoneme
@@ -232,6 +232,7 @@ endphoneme
 
 phoneme y
   vwl starttype #i endtype #i
+  ipa ɨ
   length 100
   FMT(vwl_ru/i#)
 endphoneme
@@ -376,6 +377,7 @@ endphoneme
 
 phoneme u"
   vwl starttype #u endtype #u
+  ipa ʉ
   length 150
   FMT(vwl_ru/u#u)
 endphoneme

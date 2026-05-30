@@ -252,7 +252,7 @@ pro	pro:	$u
 von	fOn	$u+	$brk
 //(von dem)	%fOn%de:m	$brk
 vom	fOm	$u+	$brk
-vor	,fOr	$strend
+vor	,fo:r	$strend
 zu	tsu:	$u+	$brk
 zum	tsUm	$u+	$pause
 zur	tsu:r	$u+	$pause
@@ -293,7 +293,7 @@ mir		$u+	$only
 du		$u	$only
 dich		$u+	$only
 dir		$u+	$only
-er	Er	$u	$brk $only
+er	e:r	$u	$brk $only
 es	Es	$u	$only
 ihn		$u+	$only
 ihm		$u+	$only
@@ -394,11 +394,11 @@ willst	%vIlst	$only
 wollen	%vOl@n	$only
 wollt	%vOlt
 
-werden	v,Erd@n	$u
-werde	v,Erd@	$u
+werden	v,e:rd@n	$u
+werde	v,e:rd@	$u
 wirst	v,Irst
 wird	v,Ird
-werdet	v,Erd@t
+werdet	v,e:rd@t
 worden		$u
 wurden	v,Urd@n
 wurde	v,Urd@

@@ -535,9 +535,13 @@ s_couv) en (t_               // elles couvent
         eu         Y         // eu
         eu (CX    W         // neuf
         eu (CeX    W         // fleuve
+        eu (seX    Y         // heureuse, creuse, -euse (eu+s = ø)
+        eu (teX    Y         // meute, émeute, -eute (eu+t+e = ø)
+        eu (tr     Y         // neutre, feutre (eu+tr = ø)
+    _)  eu (L06    Y         // word-initial eu- (Greek prefix): eupraxie, euglène = ø
+        eu (L06    W         // peuple, meuble, aveugle (eu + obstruent+liquid cluster = œ)
         eu (Cer_    Y         // pleurer
         eu (i    W         // feuille
-        eu (CeX    Y        // meule
         eu (reX    W        // demeure
         eu (leX    W        // gueule
         eu (ler    Y        // gueuler
@@ -660,7 +664,7 @@ no)	ë (_	e		// canoë
     su) gg (Y      gZ        // suggérer suggestif
         gg         g         // agglomérer
     ai) gni        n^        // craignions châtaignier
-        gn         nj        // agneau
+        gn         nj        // agneau (nj = modal Hexagonal intervocalic realization; reverted from ɲ)
    _wa) gner (_    gnEr
   _sta) gn          gn
    dia) gn          gn
@@ -1014,6 +1018,8 @@ _re)	name		_^_en
         o (_       o         // zorro allégro
    gr) oss         os        // grosse, grossir
 
+        o (se_     o         // chose, rose, pose, dose (o-s + final mute e)
+        o (se      o         // choses, roseau (o + intervocalic s)
         o (Ce_     O         // pote
         o (CA      o         // otarie
         o (Che_    O         // poche, wisigothe, apostrophe
