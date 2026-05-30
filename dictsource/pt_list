@@ -164,7 +164,8 @@ _−	m'enUs
 ?1 ™	m,a*k&||R#eZis#t'ad&
 ?2 ™	m,a*k&||R#eZis#t*'ad&
 _,	v'i*gul&
-_-	'ifeIN
+?1 _-	'if&~j
+?2 _-	'ife~j
 _/	b'aR#&
 _:	d,oIs#||p'o~Ntus#
 _;	p,o~Ntw||i||v'i*gul&
@@ -264,7 +265,8 @@ _8X	oIt'e~Nt&
 ?4 _8X	oj/t'e~Nt&
 ?1 _9X	nuv'e~Nt&
 ?2 _9X	nov'e~Nt&
-_1C0	s'eIN
+?1 _1C0	s'&~j
+?2 _1C0	s'e~j
 ?1 _0C	s'e~Ntus#
 ?2 _0C	s'e~NtUs#
 ?1 _1C	s'e~Ntu
@@ -666,7 +668,8 @@ elt	$abbrev
 emi	$abbrev
 ems	$abbrev
 emt	$abbrev
-enem	en'eIN
+?1 enem	en'&~j
+?2 enem	en'e~j
 eng	$abbrev
 ensp	$abbrev
 epct	$abbrev
@@ -2391,7 +2394,8 @@ jogo		$alt $verb
 jogos		$alt
 joguete		$alt2
 joinha		Z,O'in^&
-jovens		Z'OveINs
+?1 jovens	Z'Ov&~js
+?2 jovens	Z'Ove~js
 judeia		$alt
 junior		$1
 juniores	$alt2
@@ -2469,8 +2473,10 @@ namoro		$alt2 $noun
 naquela		$nounf
 naquele		$alt2 $nounf
 nervo		$alt2
-(nhe nhem)	n^,e||n^'eIN
-(nhe nhe nhem)	n^,e||n^e||n^'eIN
+?1 (nhe nhem)	n^,e||n^'&~j
+?2 (nhe nhem)	n^,e||n^'e~j
+?1 (nhe nhe nhem)	n^,e||n^e||n^'&~j
+?2 (nhe nhe nhem)	n^,e||n^e||n^'e~j
 niceia		$alt
 ninfeta		$alt2
 nitreto		$alt2

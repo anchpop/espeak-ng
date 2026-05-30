@@ -396,8 +396,14 @@ ÿ	ÿ	// y + U+0308 = U+00FF
 ?4      en (C      e~
 
         em (_      =eIN
+?1      em (_      =&~j/      // EP nasal (default =eIN renders oral [eɪm])
+?2      em (_      =e~j/      // BP nasal (default =eIN renders oral [eɪm])
         en (_      =eIN
+?1      en (_      =&~j/      // EP nasal (default =eIN renders oral [eɪm])
+?2      en (_      =e~j/      // BP nasal (default =eIN renders oral [eɪm])
         en (s_     =eIN
+?1      en (s_     =&~j/      // EP nasal (default =eIN renders oral [eɪm])
+?2      en (s_     =e~j/      // BP nasal (default =eIN renders oral [eɪm])
 
 ?4      em (_      =e~j/
 ?4      en (_      =e~j/
@@ -719,7 +725,11 @@ _entorp) e (çL03_  e
 ?4      én (C      ''e~
 
         ém (_      ''eIN
+?1      ém (_      ''&~j/     // EP nasal (default ''eIN renders oral [eɪm])
+?2      ém (_      ''e~j/     // BP nasal (default ''eIN renders oral [eɪm])
         én (_      ''eIN
+?1      én (_      ''&~j/     // EP nasal (default ''eIN renders oral [eɪm])
+?2      én (_      ''e~j/     // BP nasal (default ''eIN renders oral [eɪm])
 
 ?4      ém (_      ''e~j/
 ?4      én (_      ''e~j/
@@ -739,7 +749,11 @@ _entorp) e (çL03_  e
 ?4      ên (C      ''e~
 
         êm (_      ''eIN
+?1      êm (_      ''&~j/     // EP nasal (default ''eIN renders oral [eɪm])
+?2      êm (_      ''e~j/     // BP nasal (default ''eIN renders oral [eɪm])
         ên (_      ''eIN
+?1      ên (_      ''&~j/     // EP nasal (default ''eIN renders oral [eɪm])
+?2      ên (_      ''e~j/     // BP nasal (default ''eIN renders oral [eɪm])
 
 ?4      êm (_      ''e~j/
 ?4      ên (_      ''e~j/
