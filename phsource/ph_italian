@@ -97,6 +97,7 @@ endphoneme
 
 phoneme I
   vwl starttype #i endtype #i
+  ipa i
   length 145
   IfNextVowelAppend(;)
   FMT(vowel/i_7)
@@ -140,6 +141,7 @@ endphoneme
 
 phoneme U
   vwl starttype #u endtype #u
+  ipa u
   length 140
   FMT(vowel/u_bck2)
 endphoneme
